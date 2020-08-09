@@ -1,0 +1,35 @@
+<%= form_with model: [:dashboard, @contact_address], class: "nifty_form" do |address| %>
+  <div class="row">
+    <div class="col form-group">
+      <%= address.text_field :title, placeholder: "Address title", class: "form-control", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col form-group">
+      <%= address.text_field :street, placeholder: "Street", class: "form-control", required: true %>
+    </div>
+    <div class="col">
+      <%= address.text_field :street_no, placeholder: "Street no", class: "form-control", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col form-group">
+      <%= address.text_field :city, placeholder: "City", class: "form-control", required: true %>
+    </div>
+    <div class="col">
+      <%= address.text_field :state, placeholder: "State", class: "form-control", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col form-group">
+      <%= address.text_field :zip_code, placeholder: "Zip code", class: "form-control", required: true %>
+    </div>
+    <div class="col">
+      <%= address.text_field :country, placeholder: "Country", class: "form-control", required: true %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+    <%= address.submit "Save Address", class: "btn btn-outline-info" %>
+  </div>
+<% end %>

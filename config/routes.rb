@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   devise_for :users , controllers: { registrations: "registrations" }
 
   namespace :dashboard do
-    resources :contact_addresses, only: %i(index new create)
+    resources :contact_addresses, only: %i(index create)
   end
 end
