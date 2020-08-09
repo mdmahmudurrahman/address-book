@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  db:
+    image: "mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_USERNAME: mahmud
+      MYSQL_PASSWORD: mahmuFa
+    ports:
+      - "3307:3306"
+  website:
+    depends_on:
+      - "db"
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USERNAME: mahmud
+      DB_PASSWORD: mahmuFa
+      DB_DATABASE: address_book_development
+      DB_PORT: 3306
+      DB_HOST: db
+      RAILS_ENV: development
+      RAILS_MAX_THREADS: 5
+    volumes:
+      - ".:/app"
+      - bundle:/bundle
+volumes:
+  db:
+  bundle:
