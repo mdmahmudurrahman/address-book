@@ -1,5 +1,5 @@
 class Dashboard::ContactAddressesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: %i(index new)
 
   def index
     @contact_addresses = current_user.contact_addresses
