@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Environment setup
 
-Things you may want to cover:
+Ruby version: 2.7.1
 
-* Ruby version
+Ruby on Rails version: 6.0.3.2
 
-* System dependencies
+Database: MySql
 
-* Configuration
 
-* Database creation
+### Project setup:
 
-* Database initialization
+Run the following command:
 
-* How to run the test suite
+=> bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+=> rails db:drop db:create db:migrate
 
-* Deployment instructions
+=> rails s
 
-* ...
+
