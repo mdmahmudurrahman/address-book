@@ -1,7 +1,7 @@
 
-### docker-compose run web bundle install
+### docker-compose run website bundle install
 
-### docker-compose run web rails db:setup
+### docker-compose run website rails db:setup
 
 ### docker-compose build
 
